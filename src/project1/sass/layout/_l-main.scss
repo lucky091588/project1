@@ -1,0 +1,14 @@
+.l-main {
+  margin-top: 15px;
+}
+.l-main--page {
+  margin-top: 0;
+}
+
+html {
+	&.is-disable {
+		overflow: hidden;
+		margin: 0;
+		height: 100%;
+	}
+}

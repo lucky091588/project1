@@ -1,0 +1,79 @@
+.wp-pagenavi {
+    list-style-type: none;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 24px;
+    @include max-screen($breakpoint-mobile) {
+      padding: 0;
+    }
+
+    .page, .current, .previouspostslink, .nextpostslink {
+        display: inline-block;
+        vertical-align: middle;
+        min-width: 51px;
+        border: 1px solid $pagination-border-color;
+        background-color: $pagination-bg-color;
+        color: $pagination-font-color;
+        transition: background $base-duration $base-animation,
+                    color $base-duration $base-animation;
+        font-size: 14px;
+        padding: 14px 0;
+        margin: 0 8.5px;
+        font-weight: bold;
+        border-radius: 3px;
+        font-family: $font-brandon;
+        @include max-screen($breakpoint-mobile) {
+          margin: 10px 6px;
+        }
+
+        &:first-child{
+          margin-left:0;
+          @include max-screen($breakpoint-mobile) {
+            margin-left: 6px;
+          }
+        }
+        &:last-child{
+          margin-right:0;
+          @include max-screen($breakpoint-mobile) {
+            margin-right: 6px;
+          }
+        }
+    }
+
+    .page {
+        &:hover {
+            background-color: $pagination-hovered-bg-color;
+            color: $pagination-hovered-font-color;
+        }
+    }
+
+    .current {
+        background-color: $pagination-hovered-bg-color;
+        color: $pagination-hovered-font-color;
+    }
+
+    .extend {
+        display: inline-block;
+        vertical-align: middle;
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+        color: $pagination-font-color;
+        padding: 2px 0;
+        margin-top: -11px;
+    }
+
+    //remove first dot3x (...)
+    .extend:nth-last-child(2),
+    .previouspostslink + .extend {
+        display: none;
+    }
+
+    .previouspostslink,
+    .nextpostslink {
+        &:hover {
+            background-color: $pagination-hovered-bg-color;
+            color: $pagination-hovered-font-color;
+        }
+    }
+}

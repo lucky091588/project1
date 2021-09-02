@@ -1,0 +1,422 @@
+//.form {}
+$windows-chrome-target: '.is-windows.is-chrome &';
+$ie: '.is-ie &';
+$mac-safari: '.is-mac.is-safari &';
+.form-main {
+  position: relative;
+  @include max-screen($breakpoint-mobile) {
+    padding-bottom: 30px;
+  }
+}
+.form-main__inner {
+  background-color: #fff;
+  padding: 94px 95px 49px 42px;
+  @include max-screen($breakpoint-mobile) {
+    padding: 40px 15px 50px;
+  }
+}
+.form-main__wrapper {
+  margin-bottom: 40px;
+  .page-contact--brochure & {
+    margin-bottom: 49px;
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 44px;
+    }
+  }
+}
+.form__group {
+  margin-bottom: 50px;
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 6px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .form-main--confirm & {
+    margin-bottom: 15px;
+  }
+}
+.form__label-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  width: 255px;
+  padding-right: 20px;
+  padding-top: 14px;
+  position: relative;
+  padding-left: 70px;
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 13px;
+    padding-top: 10px;
+    padding-left: 0;
+    .form-main--contact & {
+      width: 100%;
+    }
+  }
+}
+.form__label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #221815;
+  @include max-screen($breakpoint-mobile) {
+    margin-right: 15px;
+    font-size: 12px;
+  }
+  .is-ios & {
+    @media screen and (min-width: 480px) and (max-width: $breakpoint-mobile) {
+      font-size: 8px;
+      top: 1px;
+      position: relative;
+    }
+  }
+  #{$ie} {
+    top: 2px;
+    position: relative;
+  }
+}
+.form__field-status {
+  position: absolute;
+  left: 2px;
+  top: 10px;
+  text-align: center;
+  padding: 3px 10px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  @include max-screen($breakpoint-mobile) {
+    padding: 3px 11px 2px 9px;
+    font-size: 10px;
+    left: auto;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    top: auto;
+    margin-right: 10px;
+  }
+  .form-main--confirm & {
+    display: none;
+  }
+  #{$windows-chrome-target} {
+    padding: 4px 10px 3px;
+  }
+  #{$ie} {
+    padding: 5px 10px 0;
+  }
+  #{$mac-safari} {
+    padding: 4px 10px 2px;
+  }
+}
+.form__field-status--required {
+  background-color: #dd2616;
+}
+$error-field: '& ~ .form__file,& + .form__input,& + .custom-select .form__input';
+.form__field-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -5px;
+  width: 100%;
+  .error {
+    &:first-child,
+    &:nth-child(2) {
+      display: none;
+    }
+    #{$error-field} {
+      border: 2px solid red;
+    }
+  }
+
+  .form-main--contact & {
+    width: calc(100% - 260px);
+    @include max-screen($breakpoint-mobile) {
+      width: 100%;
+    }
+  }
+  .form-main--confirm & {
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 13px;
+    @include max-screen($breakpoint-mobile) {
+      font-size: 12px;
+      padding-top: 0;
+    }
+  }
+}
+.form__field-wrapper--select {
+  position: relative;
+  width: 260px;
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+  }
+}
+.form__radio-wrapper {
+  padding-top: 15px;
+  margin-left: 0;
+  @include max-screen($breakpoint-mobile) {
+    padding-top: 1px;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  .error + .form__input {
+    border: 2px solid red;
+  }
+  .form-main--confirm & {
+    padding-top: 0;
+  }
+}
+.form__field-message {
+  display: block;
+  font-size: 12px;
+  padding-top: 5px;
+  &.is-error {
+    color:red;
+  }
+  .form-main--confirm & {
+    display: none;
+  }
+}
+.form__field-message--right {
+  text-align: right;
+  .form-main--confirm & {
+    display: none;
+  }
+}
+.form__field-message--red {
+  color: red;
+}
+.form__input {
+  border-radius: 0;
+  height: 50px;
+  width: 100%;
+  padding: 0 15px;
+  outline: none;
+  background-color: #f1f1f1;
+  font-size: 16px;
+  color: #221815;
+  &.is-error {
+    border: 2px solid red;
+  }
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+    font-size: 16px;
+  }
+  #{$windows-chrome-target} {
+    padding: 2px 15px 0;
+  }
+  #{$ie} {
+    padding: 4px 15px 0;
+  }
+  #{$mac-safari} {
+    padding: 3px 15px 0;
+  }
+}
+.form__input--small-width {
+  width: 70px;
+}
+.form__input--medium-width {
+  width: 120px;
+}
+.form__input--fluid-width {
+  width: 100%;
+}
+.form__input--textarea {
+  height: 150px;
+  resize: none;
+  padding-top: 15px;
+  @include max-screen($breakpoint-mobile) {
+    height: 100px;
+  }
+  #{$mac-safari},
+  #{$ie} {
+    padding-top: 15px;
+  }
+}
+.form__checkbox {
+  outline: none;
+  visibility: hidden;
+  &.is-error {
+    + .form__checkbox-style {
+      border: 2px solid red;
+    }
+  }
+}
+$checked: '.form__checkbox:checked + .form__checkbox-style .form__checkbox-style-left, .form__checkbox:checked + .form__checkbox-style .form__checkbox-style-right';
+#{$checked} {
+  opacity: 1;
+}
+.form__checkbox-wrapper {
+  float: left;
+  width: 13px;
+  height: 13px;
+  position: relative;
+  margin-top: 4px;
+  margin-right: 10px;
+  @include max-screen($breakpoint-mobile) {
+    width: 10px;
+    height: 10px;
+    margin-top: 2px;
+    margin-right: 5px;
+  }
+}
+.form__checkbox-style {
+  display: block;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include max-screen($breakpoint-mobile) {
+    width: 10px;
+    height: 10px;
+  }
+}
+.form__checkbox-style-left,
+.form__checkbox-style-right {
+  opacity: 0;
+  display: block;
+  position: absolute;
+  height: 3px;
+  transition: opacity 0.25s ease-out;
+  @include max-screen($breakpoint-mobile) {
+    height: 2px;
+  }
+}
+.form__checkbox-style-right {
+  width: 17px;
+  transform: translate3d(0px, 0px, 0) rotate(-45deg);
+  @include max-screen($breakpoint-mobile) {
+    width: 8px;
+    left: 3px;
+  }
+}
+.form__checkbox-style-left {
+  width: 7px;
+  transform: rotate(38deg) translate3d(2px, 3px, 0);
+  @include max-screen($breakpoint-mobile) {
+    width: 5px;
+    top: -1px;
+  }
+}
+$radio-checked: '&:checked + .form__radio-style .form__radio-style-button';
+$is-windows-is-firefox: '.is-windows.is-firefox .form__radio';
+.form__radio {
+  outline: none;
+  visibility: hidden;
+  width: 0;
+  display: none;
+  #{$radio-checked} {
+    opacity: 1;
+  }
+  &.is-error {
+    + .form__radio-style {
+      border: 2px solid red;
+    }
+  }
+}
+#{$is-windows-is-firefox} {
+  display: none;
+}
+.form__radio-label {
+  position: relative;
+  margin-right: 5px;
+}
+.form__radio-style {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  position: relative;
+}
+.form__radio-style-button {
+  opacity: 0;
+  width: 7px;
+  height: 7px;
+  background-color: #000;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+}
+.form__hidden {
+  display: none;
+}
+.form__file {
+  height: 40px;
+  display: flex;
+  align-items: center;
+
+  .form-main--confirm & {
+    display: none;
+  }
+}
+.form__file-placeholder {
+  flex: 1;
+  @include max-screen($breakpoint-mobile) {
+    font-size: 8px;
+  }
+}
+.form__file-button {
+  min-width: 121px;
+  padding: 5px 3px;
+  font-size: 12px;
+  background-color: red;
+  border-radius: 4px;
+  cursor: pointer;
+  @include max-screen($breakpoint-mobile) {
+    width: 80px;
+    height: 22px;
+    font-size: 8px;
+  }
+}
+.form-terms {
+  padding-left: 50px;
+  text-align: center;
+  @include max-screen($breakpoint-mobile) {
+    padding-left: 0;
+  }
+  .form-main--confirm & {
+    display: none;
+  }
+}
+.form-terms__label {
+  margin-bottom: 46px;
+  display: inline-block;
+  font-size: 16px;
+  padding-left: 10px;
+  @include max-screen($breakpoint-mobile) {
+    font-size: 14px;
+    padding: 0 28px;
+    line-height: 2;
+    margin-bottom: 24px;
+  }
+  a {
+    text-decoration: underline;
+    color: #189cd2;
+  }
+}
+.form__data {
+  font-size: 15px;
+}
+.form__data-image {
+  margin-top: 22px;
+}
+.form-confirm__buttons {
+  text-align: center;
+  display: none;
+
+  .form-main--confirm & {
+    display: block;
+    margin-top: 50px;
+  }
+}
+.form-br {
+  .form-main--confirm & {
+    display: none;
+  }
+}

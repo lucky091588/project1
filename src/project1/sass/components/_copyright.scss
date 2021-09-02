@@ -1,0 +1,11 @@
+.copyright {
+  color: $footer-font-color;
+  font-family: $font-brandon;
+  font-weight: bold;
+  @include  max-screen($breakpoint-mobile) {
+    margin-left: -3px;
+  }
+  small {
+    font-size: 10px;
+  }
+}

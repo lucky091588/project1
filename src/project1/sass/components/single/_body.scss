@@ -1,0 +1,495 @@
+.single-body {
+  margin-bottom: 36px;
+  @include  max-screen($breakpoint-mobile) {
+    margin-bottom: 23px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 30px;
+    font-weight: bold;
+    color: $article-font-color;
+  }
+  h2 {
+    letter-spacing: -0.004em;
+    border-bottom: 1px solid $article-heading-border-color;
+    padding-bottom: 3px;
+    margin-bottom: 42px;
+    position: relative;
+    z-index: 1;
+    @include  max-screen($breakpoint-mobile) {
+      font-size: 22px;
+      padding-bottom: 4px;
+      margin-bottom: 20px;
+    }
+    &:before {
+      content: "";
+      background-color: #ebf7fc;
+      width: 100%;
+      height: calc(100% - 19px);
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      @include  max-screen($breakpoint-mobile) {
+        height: calc(100% - 13px);
+      }
+    }
+  }
+  h3 {
+    letter-spacing: -0.004em;
+    border-bottom: 1px solid $article-heading-border-color;
+    padding-bottom: 4px;
+    margin-bottom: 50px;
+    font-size: 24px;
+    @include  max-screen($breakpoint-mobile) {
+      font-size: 20px;
+      margin-bottom: 25px;
+      padding-bottom: 7px;
+    }
+  }
+  h4 {
+    letter-spacing: -0.004em;
+    margin-bottom: 40px;
+    font-size: 20px;
+    @include  max-screen($breakpoint-mobile) {
+      font-size: 19px;
+      margin-bottom: 20px;
+    }
+    &:after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+      background: repeating-linear-gradient(90deg, $article-heading-border-color, $article-heading-border-color 7px, $article-heading-gradient-top-color 0, $article-heading-gradient-top-color 10px);
+      margin-top: 6px;
+      @include  max-screen($breakpoint-mobile) {
+        background: repeating-linear-gradient(90deg, #189cd2, #189cd2 12px, #ffffff 12px, #fff 18px);
+      }
+    }
+  }
+
+  h5 {
+    padding: 7px 15px 6px;
+    margin-bottom: 60px;
+    @include max-screen($breakpoint-mobile) {
+      font-size: 15px;
+      padding: 7px 0 6px;
+    }
+  }
+
+  h6 {
+    padding: 7px 15px 6px;
+    margin-bottom: 50px;
+    @include max-screen($breakpoint-mobile) {
+      font-size: 15px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    overflow: hidden;
+    line-height: 2;
+    color: $article-font-color;
+    margin-bottom: 36px;
+    @include max-screen($breakpoint-mobile) {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    &.article-outline__heading {
+      margin-bottom: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: $article-link-color;
+    letter-spacing: 0.03em;
+    transition: color $base-duration $base-animation,
+                background $base-duration $base-animation;
+    &[target="_blank"] {
+      background: url(../images/outside-link.svg) no-repeat left -4px;
+      padding-left: 23px;
+      background-size: 25px;
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 18px;
+        background-size: 20px;
+      }
+    }
+    &:hover {
+      color: $article-font-color;
+    }
+  }
+
+  b,
+  strong {
+    font-weight: bold;
+    letter-spacing: 0.02em;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  blockquote {
+    position: relative;
+    border: 1px solid $article-font-color;
+    padding: 21px 80px 21px 91px;
+    margin-bottom: 50px;
+    @include max-screen($breakpoint-mobile) {
+      padding: 16px 45px 14px 49px;
+      margin-bottom: 25px;
+    }
+    p {
+      margin-bottom: 0;
+      @include max-screen($breakpoint-mobile) {
+        line-height: 2.2;
+      }
+    }
+    &:before,
+    &:after {
+      content: "";
+      height: 40px;
+      width: 43px;
+      position: absolute;
+      background: url(../images/quote.svg) no-repeat center;
+      opacity: .1;
+      @include max-screen($breakpoint-mobile) {
+        width: 25px;
+      }
+    }
+    &:before {
+      left: 28px;
+      top: 30px;
+      @include max-screen($breakpoint-mobile) {
+        left: 13px;
+        top: 15px;
+      }
+    }
+    &:after {
+      top: 30px;
+      right: 29px;
+      transform: scaleX(-1);
+      @include max-screen($breakpoint-mobile) {
+        bottom: auto;
+        right: 14px;
+        top: 15px;
+      }
+    }
+  }
+
+  hr {
+    margin: 1em 0;
+    height: 1px;
+    border-top: 1px solid;
+  }
+
+  li {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2;
+    color: $article-font-color;
+    margin-bottom: 15px;
+    @include max-screen($breakpoint-mobile) {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 43px;
+    padding-left: 0;
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 20px;
+    }
+    li {
+      padding-left: 21px;
+      position: relative;
+      &:before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        background-color: $article-bg-color;
+        position: absolute;
+        left: 0;
+        top: 13px;
+        border-radius: 50%;
+        @include max-screen($breakpoint-mobile) {
+          top: 11px;
+          width: 6px;
+          height: 6px;
+          left: 2px;
+        }
+        @include iphonex-landscape {
+          top: 20px;
+          height: 8px;
+          width: 8px;
+        }
+        @include iphone8-landscape {
+          top: 20px;
+          height: 8px;
+          width: 8px;
+        }
+        @include iphone8s-landscape {
+          top: 20px;
+          height: 8px;
+          width: 8px;
+        }
+        @include iphonese-landscape {
+          top: 20px;
+          height: 8px;
+          width: 8px;
+        }
+      }
+      @include iphonex-landscape {
+        padding-left: 33px;
+      }
+      @include iphone8-landscape {
+        padding-left: 33px;
+      }
+      @include iphone8s-landscape {
+        padding-left: 33px;
+      }
+      @include iphonese-landscape {
+        padding-left: 33px;
+      }
+    }
+  }
+
+  ol {
+    padding-left: 18px;
+    margin-bottom: 40px;
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 20px;
+      padding-left: 22px;
+    }
+    @include iphonex-landscape {
+      padding-left: 33px;
+    }
+    @include iphone8-landscape {
+      padding-left: 33px;
+    }
+    @include iphone8s-landscape {
+      padding-left: 33px;
+    }
+    @include iphonese-landscape {
+      padding-left: 33px;
+    }
+    li {
+      padding-left: 3px;
+      list-style: decimal;
+      @include max-screen($breakpoint-mobile) {
+        padding-left: 0;
+        font-size: 14px;
+      }
+      @include iphonex-landscape {
+        padding-left: 0;
+      }
+      @include iphone8-landscape {
+        padding-left: 0;
+      }
+      @include iphone8s-landscape {
+        padding-left: 0;
+      }
+      @include iphonese-landscape {
+        padding-left: 0;
+      }
+    }
+  }
+
+  table {
+    margin-bottom: 50px;
+    width: 100%;
+    table-layout: fixed;
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 25px;
+    }
+  }
+
+  th, td {
+    border: 1px solid $article-font-color;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 500;
+    padding: 15px 0 11px;
+    color: $article-font-color;
+    @include max-screen($breakpoint-mobile) {
+      font-size: 13px;
+      padding: 17px 0 13px;
+    }
+  }
+  th {
+    background-color: $article-font-color;
+    color: $article-heading-gradient-top-color;
+    font-weight: bold;
+    border-right: 1px solid $article-heading-gradient-top-color;
+    border-left: 1px solid $article-heading-gradient-top-color;
+    padding-top: 17px;
+    padding-bottom: 10px;
+    &:first-child {
+      border-left: 1px solid $article-font-color;
+    }
+    &:last-child {
+      border-right: 1px solid $article-font-color;
+    }
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 16px;
+      padding-bottom: 13px;
+    }
+  }
+  td {
+    @include max-screen($breakpoint-mobile) {
+      padding-top: 16px;
+    }
+  }
+
+  // for youtube iframe
+  iframe {
+    margin-bottom: 13px;
+    display: block;
+    height: 425px;
+    width: 100%;
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 25px;
+      height: 188px;
+    }
+  }
+
+  .wp-caption {
+    // for div with inline style
+    width: 100% !important; // sass-lint:disable-line no-important
+    margin-bottom: 58px;
+    overflow: hidden;
+  }
+  $wp-caption-outside-link: '.wp-caption-text a[target="_blank"]';
+  #{$wp-caption-outside-link} {
+    background-size: 20px;
+  }
+  .wp-caption-text {
+    font-size: 12px;
+    padding-top: 10px;
+    &:before {
+      display: inline-block;
+      content: '▲';
+    }
+    @include max-screen($breakpoint-mobile) {
+      padding-left: 0;
+    }
+  }
+
+  .aligncenter {
+    display: block;
+    margin: 0 auto;
+  }
+  .alignright {
+    float: right;
+  }
+  .alignleft {
+    float: left;
+  }
+
+  //Quick tags
+  .single-button {
+    text-align: center;
+    margin-bottom: 50px;
+    a {
+      text-decoration: none;
+      color: $article-heading-gradient-top-color;
+      background-color: $article-link-color;
+      &[target="_blank"] {
+        background-image: none;
+        padding-left: 15px;
+        background-size: auto;
+      }
+      &:hover {
+        background-color: $article-heading-gradient-top-color;
+        color: $article-link-color;
+        @include max-screen($breakpoint-mobile) {
+          color: $article-heading-gradient-top-color;
+          background-color: $article-link-color;
+        }
+      }
+    }
+  }
+  .single-intro {
+    padding-right: 30px;
+    margin-bottom: 50px;
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 12px;
+      padding-right: 14px;
+    }
+  }
+  .single-intro--bordered {
+    border: 1px solid $article-font-color;
+    padding: 29px;
+    margin-bottom: 49px;
+    @include max-screen($breakpoint-mobile) {
+      padding: 19px 18px;
+      margin-bottom: 26px;
+    }
+    .single-intro-detail {
+      @include max-screen($breakpoint-mobile) {
+        top: -1px;
+      }
+    }
+  }
+  .single-intro-image {
+    width: 110px;
+    height: 110px;
+    padding: 3px;
+    border: 1px solid $article-image-border-color;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 18px;
+    @include max-screen($breakpoint-mobile) {
+      width: 90px;
+      height: 90px;
+      padding: 3px;
+      margin-right: 20px;
+    }
+    span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+    }
+  }
+  .single-intro-detail {
+    flex: 1;
+    @include max-screen($breakpoint-mobile) {
+      position: relative;
+      top: 3px;
+    }
+    p {
+      letter-spacing: 0.0em;
+      font-size: 18px;
+      @include max-screen($breakpoint-mobile) {
+        letter-spacing: 0.07em;
+        line-height: 2.2;
+        font-size: 14px;
+      }
+      b,
+      strong {
+        @include max-screen($breakpoint-mobile) {
+          letter-spacing: 0.07em;
+        }
+      }
+    }
+  }
+}

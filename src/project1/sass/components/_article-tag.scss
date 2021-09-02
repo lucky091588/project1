@@ -1,0 +1,31 @@
+$ie: '.is-ie &';
+.article-tag {
+  list-style: none;
+  padding-left: 4px;
+}
+.article-tag__item {
+  display: inline-block;
+  font-size: 12px;
+  margin-left: -4px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.article-tag__link {
+  color: $article-query-tag-font-color;
+  padding: 4px 14px 3px;
+  background-color: $article-query-tag-bg-color;
+  display: inline-block;
+  transition: background $base-duration $base-animation,
+              color $base-duration $base-animation;
+  &:hover {
+    background-color: #189cd2;
+    color: #fff;
+  }
+  #{$ie} {
+    padding: 6px 14px 1px;
+  }
+  @include  max-screen($breakpoint-mobile) {
+    padding: 6px 14px 5px;
+  }
+}

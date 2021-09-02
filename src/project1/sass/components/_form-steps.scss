@@ -1,0 +1,107 @@
+// .form-steps {}
+.form-steps__wrapper {
+  padding: 73px 32px 74px;
+  position: relative;
+  @include max-screen($breakpoint-mobile) {
+    padding: 25px 0;
+  }
+  .form-steps--brochure & {
+    padding: 75px 32px;
+    @include max-screen($breakpoint-mobile) {
+      padding: 25px 0;
+    }
+  }
+}
+.form-steps__inner {
+  list-style: none;
+}
+.form-steps__item {
+  float: left;
+  width: 329px;
+  height: 75px;
+  margin-right: 35px;
+  background-color: #9e9e9e;
+  position: relative;
+  padding: 12px 0 0 64px;
+  font-weight: bold;
+  font-size: 19px;
+  color: #fff;
+  @include max-screen($breakpoint-mobile) {
+    width: calc(33.3333% - 15px);
+    margin-right: 15px;
+    text-align: center;
+    padding-top: 9px;
+    padding-left: 12px;
+  }
+  &:first-child {
+    width: 320px;
+    margin-right: 42px;
+    padding-left: 50px;
+    @include max-screen($breakpoint-mobile) {
+      width: calc(33.3333% - 15px);
+      margin-right: 15px;
+      padding-left: 0;
+      padding-right: 3px;
+    }
+    &:before {
+      display: none;
+    }
+    &:after {
+      border-width: 37.5px 0 37.5px 18px;
+      right: -18px;
+      @include max-screen($breakpoint-mobile) {
+        border-width: 37.5px 0 37.5px 15px;
+        right: -15px;
+      }
+    }
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  &:before,
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 37.5px 0 37.5px 15px;
+    position: absolute;
+  }
+  &:before {
+    top: 0;
+    left: 0;
+    border-color: transparent transparent transparent #ebf7fc;
+  }
+  &:after {
+    top: 0;
+    right: -15px;
+    border-color: transparent transparent transparent #9e9e9e;
+  }
+  &.is-current {
+    background-color: #221815;
+    &:after {
+      border-color: transparent transparent transparent #221815;
+    }
+  }
+}
+.form-steps__order {
+  font-size: 35px;
+  font-family: $font-brandon;
+  @include max-screen($breakpoint-mobile) {
+    font-size: 25px;
+    display: block;
+  }
+  .is-current & {
+    color: #189cd2;
+  }
+}
+.form-steps__label {
+  top: -2px;
+  left: 5px;
+  position: relative;
+  @include max-screen($breakpoint-mobile) {
+    top: -10px;
+    left: 1px;
+    font-size: 10px;
+  }
+}

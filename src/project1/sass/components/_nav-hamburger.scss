@@ -1,0 +1,74 @@
+/*
+#styleguide
+Nav Hamburger Module
+```
+<div class="nav__hamburger">
+  <span class="nav__humberger__icon"></span>
+  <span class="nav__humberger__icon"></span>
+  <span class="nav__humberger__icon"></span>
+</div>
+
+```
+*/
+.nav__hamburger {
+  @include  max-screen($breakpoint-mobile) {
+    z-index: $z-max + 10;
+    position: relative;
+  }
+}
+
+.nav__button {
+  @include  max-screen($breakpoint-mobile) {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    outline: none;
+  }
+  .header-sp--home & {
+    transition: top $base-duration $base-animation;
+    @include  max-screen($breakpoint-mobile) {
+      top: 18px;
+      right: 1px;
+    }
+    .is-expand & {
+      top: 20px;
+      right: 0;
+    }
+    .is-stick & {
+      top: 18px;
+      right: 1px;
+    }
+  }
+}
+
+.nav__button-icon {
+  @include  max-screen($breakpoint-mobile) {
+    transition: all $base-duration $base-animation;
+    display: block;
+    width: 15px;
+    height: 2px;
+    margin-bottom: 3px;
+    background-color: #241814;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.nav__button-icon {
+  &.is-active {
+    margin: -2px 0;
+  }
+  $icon-first: '.is-active:first-child';
+  &#{$icon-first} {
+    transform: rotate(45deg);
+  }
+  $icon-second: '.is-active:nth-child(2)';
+  &#{$icon-second} {
+    opacity: 0;
+  }
+  $icon-last: '.is-active:last-child';
+  &#{$icon-last} {
+    transform: rotate(-45deg);
+  }
+}

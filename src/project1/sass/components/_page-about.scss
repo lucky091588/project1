@@ -1,0 +1,124 @@
+.page-about {
+  min-width: $site-wrapper;
+  @include max-screen($breakpoint-mobile) {
+    min-width: 100%;
+  }
+}
+.page-about__wrapper {
+  padding-top: 127px;
+  position: relative;
+  @include max-screen($breakpoint-mobile) {
+    padding-top: 42px;
+    padding-bottom: 30px;
+  }
+}
+.page-about__content {
+  position: relative;
+  z-index: $z-max - 8;
+  background-color: #fff;
+  padding-top: 29px;
+  padding-right: 76px;
+  padding-bottom: 55px;
+  @include max-screen($breakpoint-mobile) {
+    padding-top: 34px;
+    padding-bottom: 32px;
+    padding-right: 15px;
+  }
+}
+.page-about__background-title {
+  text-transform: uppercase;
+  font-size: 106px;
+  color: #189cd2;
+  font-weight: bold;
+  font-family: $font-brandon;
+  position: absolute;
+  z-index: $z-max - 9;
+  right: 0;
+  top: 28px;
+  opacity: 0.1;
+  letter-spacing: 0.04em;
+  @include max-screen($breakpoint-mobile) {
+    right: 8px;
+    top: -2px;
+    letter-spacing: 0.05em;
+    font-size: 45px;
+  }
+}
+.page-about__title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #221815;
+  padding-left: 33px;
+  margin-bottom: 24px;
+  @include max-screen($breakpoint-mobile) {
+    font-size: 15px;
+    padding-left: 14px;
+    margin-bottom: 9px;
+  }
+}
+.page-about__table {
+  width: 100%;
+}
+.page-about__row {
+  background-color: #f1f1f1;
+  &:nth-child(even) {
+    background-color: #fff;
+  }
+}
+.page-about__column {
+  padding: 15px 33px 14px;
+  font-size: 16px;
+  color: #221815;
+  font-weight: 500;
+  line-height: 2.25;
+  @include max-screen($breakpoint-mobile) {
+    padding: 13px 0 11px 14px;
+    font-size: 13px;
+    line-height: 2;
+  }
+}
+.page-about__column-title {
+  width: 150px;
+  font-weight: 700;
+  vertical-align: top;
+  @include max-screen($breakpoint-mobile) {
+    width: 70px;
+    padding-top: 12px;
+    padding-left: 16px;
+  }
+}
+.page-about__suppliers {
+  overflow: hidden;
+}
+.page-about__suppliers-left,
+.page-about__suppliers-right {
+  float: left;
+  line-height: 2.25;
+  position: relative;
+  @include max-screen($breakpoint-mobile) {
+    float: none;
+    font-size: 12px;
+    line-height: 2;
+  }
+}
+.page-about__suppliers-left {
+  padding-right: 33px;
+  width: 56%;
+  left: -4px;
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+    padding-right: 0;
+    top: 0;
+    left: 0;
+  }
+}
+.page-about__suppliers-right {
+  width: 44%;
+  top: -2px;
+  left: -4px;
+  @include max-screen($breakpoint-mobile) {
+    width: 100%;
+    top: -1px;
+    left: 0px;
+  }
+}

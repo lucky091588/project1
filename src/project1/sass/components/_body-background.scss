@@ -1,0 +1,9 @@
+.body-background {
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  background-color: $color-white-ice;
+  top: 0;
+  right: 0;
+  z-index: $z-max - 10;
+}

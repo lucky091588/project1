@@ -1,0 +1,54 @@
+.l-container {
+  width: $site-wrapper;
+  margin: 0 auto;
+  padding: 0 30px;
+  position: relative;
+  @include  max-screen($breakpoint-mobile) {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .footer-main & {
+    @include  max-screen($breakpoint-mobile) {
+      display: block;
+    }
+  }
+}
+.l-container--bg {
+  &:before {
+    content: "";
+    height: 100%;
+    right: 30px;
+    background-color: $body-bg-color;
+    z-index: 0;
+    width: 814px;
+    position: absolute;
+    @include  max-screen($breakpoint-mobile) {
+      width: calc(100% - 125px);
+      right: 20px;
+    }
+  }
+}
+.l-container--content {
+  &:after {
+    content: "";
+    height: calc(100% - 92px);
+    width: calc(100% - 100px);
+    background-color: #fff;
+    bottom: 0;
+    left: 30px;
+    position: absolute;
+    z-index: 1;
+    @include  max-screen($breakpoint-mobile) {
+      height: calc(100% - 49px);
+      width: 100%;
+    }
+    .page-about & {
+      width: 100%;
+      height: calc(100% - 127px);
+    }
+  }
+}
+.l-container--max {
+  width: 100%;
+  max-width: $site-wrapper;
+}

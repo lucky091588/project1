@@ -1,0 +1,313 @@
+$ie: '.is-ie &';
+$mac-safari: '.is-mac.is-safari &';
+.article-query {
+  margin: 0 -15px;
+  @include max-screen($breakpoint-mobile) {
+    margin: 0 -7.5px;
+  }
+}
+.article-query--pickup {
+  margin: 0 -28px;
+  @include max-screen($breakpoint-mobile) {
+    margin: 0 -20px 0 0;
+  }
+}
+.article-query--sidebar {
+  margin: 0;
+}
+.article-query__inner {
+  list-style: none;
+  .article-query--new-posts & {
+    margin-left: -3px;
+    @include max-screen($breakpoint-mobile) {
+      margin-left: 0;
+    }
+  }
+}
+.article-query__item {
+  flex: 0 1 50%;
+  padding: 0 15px;
+  margin-bottom: 46px;
+  #{$ie} {
+    padding: 0;
+  }
+  @include max-screen($breakpoint-mobile) {
+    padding: 0 7.5px;
+    margin-bottom: 29px;
+  }
+  .article-query--pickup & {
+    padding: 0px 28px;
+    margin-bottom: 0;
+    #{$ie} {
+      padding: 0;
+    }
+    @include max-screen($breakpoint-mobile) {
+      padding: 0 15px 0 0;
+    }
+    &:nth-child(2) {
+      margin-top: 126px;
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 0;
+      }
+    }
+    &:nth-child(3) {
+      margin-top: -35px;
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 0;
+      }
+    }
+    &:nth-child(4) {
+      margin-top: 83px;
+      @include max-screen($breakpoint-mobile) {
+        margin-top: 0;
+      }
+    }
+  }
+  .article-query--sidebar & {
+    flex: 0 1 100%;
+    margin-bottom: 0;
+    padding: 10px 0;
+    border-bottom: 2px solid rgba($article-query-font-color, .5);
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+  .article-query--single & {
+    margin-bottom: 0;
+  }
+  .article-query--new-posts & {
+    flex: 0 1 33.3333%;
+    margin-bottom: 0;
+    @include max-screen($breakpoint-mobile) {
+      flex: 0 1 50%;
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+}
+.article-query__article {
+  .article-query--pickup & {
+    #{$ie} {
+      padding: 0px 28px;
+    }
+  }
+  .article-query--new-posts &,
+  .article-query--single &,
+  .article-query--index & {
+    #{$ie} {
+      padding: 0px 15px;
+    }
+  }
+}
+.article-query__link {
+  display: block;
+  position: relative;
+  &:hover {
+    .article-query__eyecatch {
+      transform: scale(1.2);
+    }
+  }
+}
+.article-query__eyecatch-wrapper {
+  width: 100%;
+  height: 238px;
+  overflow: hidden;
+  margin-bottom: 9px;
+  position: relative;
+  @include max-screen($breakpoint-mobile) {
+    height: calc(27vw + -2px);
+    margin-bottom: 10px;
+  }
+  .article-query--pickup & {
+    height: 313px;
+    margin-bottom: 14px;
+    @include max-screen($breakpoint-mobile) {
+      height: calc(53vw - 1px);
+      margin-bottom: 13px;
+    }
+  }
+  .article-query--sidebar & {
+    width: 91px;
+    height: 56px;
+    float: left;
+    margin-bottom: 0;
+    margin-right: 13px;
+    #{$mac-safari} {
+      margin-right: 10px;
+    }
+  }
+  .article-query--new-posts & {
+    height: 221px;
+    @include max-screen($breakpoint-mobile) {
+      height: 100px;
+    }
+  }
+}
+.article-query__rank {
+  height: 28px;
+  width: 28px;
+  background-color: $article-query-rank-bg-color;
+  border-radius: 50%;
+  display: block;
+  font-style: normal;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  z-index: $z-max;
+  text-align: center;
+  color: $article-query-font-color;
+  font-weight: bold;
+  font-family: $font-brandon;
+  font-size: 15px;
+  padding-top: 3px;
+}
+.article-query__eyecatch {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: transform $base-duration $base-animation;
+}
+.article-query__cat-date {
+  position: relative;
+  margin-bottom: 7px;
+  @include max-screen($breakpoint-mobile) {
+    margin-bottom: 0;
+  }
+  .article-query--pickup & {
+    margin-bottom: 6px;
+    @include max-screen($breakpoint-mobile) {
+      margin-bottom: 0;
+    }
+  }
+  .article-query--sidebar & {
+    top: -5px;
+    margin-bottom: -3px;
+  }
+}
+.article-query__cat {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $article-query-cat-font-color;
+  font-weight: bold;
+  font-family: $font-brandon;
+  padding-left: 16px;
+  line-height: 2;
+  margin-right: 13px;
+  @include max-screen($breakpoint-mobile) {
+    font-size: 10px;
+    padding-left: 17px;
+    margin-right: 4px;
+  }
+  @include max-screen($breakpoint-mobile-sm) {
+    font-size: 9px;
+  }
+  &:before {
+    content: "";
+    height: 45px;
+    width: 2px;
+    background-color: $article-query-cat-font-color;
+    position: absolute;
+    bottom: 5px;
+    left: 7px;
+    @include max-screen($breakpoint-mobile) {
+      height: 41px;
+      width: 2px;
+      bottom: auto;
+      top: -27px;
+      left: 9px;
+    }
+    .article-query--pickup & {
+      left: 10px;
+      bottom: 7px;
+      width: 3px;
+      @include max-screen($breakpoint-mobile) {
+        left: 10px;
+        bottom: 8px;
+        width: 2px;
+        height: 40px;
+      }
+    }
+  }
+  .article-query--pickup & {
+    padding-left: 18px;
+    margin-right: 15px;
+    @include max-screen($breakpoint-mobile) {
+      padding-left: 21px;
+      margin-right: 5px;
+    }
+  }
+  .article-query--sidebar & {
+    color: $article-query-font-color;
+    font-size: 11px;
+    padding-left: 0;
+    margin-right: 9px;
+    &:before {
+      display: none;
+    }
+  }
+}
+.article-query__date {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $article-query-date-font-color;
+  font-weight: bold;
+  font-family: $font-brandon;
+  line-height: 2;
+  @include max-screen($breakpoint-mobile) {
+    font-size: 10px;
+  }
+  @include max-screen($breakpoint-mobile-sm) {
+    font-size: 9px;
+  }
+  .article-query--sidebar & {
+    color: rgba($article-query-font-color, .5);
+    font-size: 11px;
+  }
+}
+.article-query__title {
+  font-size: 18px;
+  font-weight: bold;
+  color: $article-query-title-color;
+  line-height: 1.5;
+  overflow: hidden;
+  height: 55px;
+  position: relative;
+  @include max-screen($breakpoint-mobile) {
+    font-size: 12px;
+    line-height: 1.7;
+    height: 43px;
+  }
+  .article-query--pickup & {
+    font-size: 23px;
+    height: 70px;
+    @include max-screen($breakpoint-mobile) {
+      font-size: 16px;
+      line-height: 1.5;
+      height: 48px;
+    }
+  }
+  .article-query--sidebar & {
+    color: $article-query-font-color;
+    font-size: 12px;
+    height: 37px;
+    @include max-screen($breakpoint-mobile) {
+      line-height: 1.5;
+      height: 34px;
+    }
+  }
+}
+.article-query__no-article {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  .sidebar__content--query & {
+    color: #fff;
+  }
+}

@@ -1,0 +1,31 @@
+.footer-nav {
+  @include  max-screen($breakpoint-mobile) {
+    margin-bottom: 10px;
+  }
+}
+.footer-nav__item {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 30px;
+  letter-spacing: 0.03em;
+  @include  max-screen($breakpoint-mobile) {
+    padding-right: 20px;
+    margin-left: 1px;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+}
+.footer-nav__link {
+  color: $footer-font-color;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: $font-brandon;
+  transition: color $base-duration $base-animation;
+  @include  max-screen($breakpoint-mobile) {
+    font-size: 10px;
+  }
+  &:hover {
+    color: $footer-hover-color;
+  }
+}

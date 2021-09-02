@@ -1,0 +1,25 @@
+// .hatena-bookmark {}
+.hatena-bookmark-button-frame {
+  @include  max-screen($breakpoint-mobile) {
+    display: none;
+    &:first-child {
+      width: 100% !important;
+      height: 44px !important;
+    }
+  }
+  &:nth-child(2) {
+    display: none;
+    @include  max-screen($breakpoint-mobile) {
+      display: block;
+    }
+  }
+  .article-single__sns--bottom & {
+    display: block;
+    &:nth-child(2) {
+      display: none;
+      @include  max-screen($breakpoint-mobile) {
+        display: none;
+      }
+    }
+  }
+}

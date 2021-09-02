@@ -1,0 +1,10 @@
+.l-content {
+  padding: 105px 0 130px;
+  min-width: $site-wrapper;
+  @include  max-screen($breakpoint-mobile) {
+    min-width: 100%;
+  }
+}
+.l-content--blog {
+  padding-bottom: 70px;
+}

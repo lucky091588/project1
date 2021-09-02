@@ -1,0 +1,73 @@
+.header {
+  position: relative;
+  z-index: $z-max + 1;
+}
+.header--home {
+  background-color: transparent;
+  height: auto;
+  box-shadow: none;
+  z-index: $z-max - 9;
+  @include max-screen($breakpoint-mobile) {
+    z-index: $z-max + 1;
+  }
+}
+.header__wrapper {
+  padding: 25px 0;
+  position: relative;
+  .header--home & {
+    padding: 44px 0 0;
+  }
+}
+.header__pc {
+  background-color: $header-bg-color;
+  box-shadow: 0px 0px 8px 0px rgba($header-box-shadow-color, 0.36);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  @include max-screen($breakpoint-mobile) {
+    display: none;
+  }
+  .header--home & {
+    box-shadow: none;
+    background-color: transparent;
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+}
+.header-sp {
+  display: none;
+  @include max-screen($breakpoint-mobile) {
+    display: block;
+    position: fixed;
+    padding: 12px 0 11px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: $header-bg-color;
+    box-shadow: 0px 0px 8px 0px rgba($header-box-shadow-color, 0.36);
+  }
+}
+$is-scrolled-expand: '.is-scrolled .is-expand &';
+.header-sp--home {
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  height: 77px;
+  transition: height $base-duration $base-animation,
+              background $base-duration $base-animation,
+              box-shadow $base-duration $base-animation;
+  .is-expand & {
+    height: 54px;
+  }
+  .is-stick & {
+    height: 54px;
+    background-color: $header-bg-color;
+    box-shadow: 0px 0px 8px 0px rgba($header-box-shadow-color, 0.36);
+  }
+  #{$is-scrolled-expand} {
+    background-color: $header-bg-color;
+    box-shadow: 0px 0px 8px 0px rgba($header-box-shadow-color, 0.36);
+  }
+}

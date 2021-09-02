@@ -1,0 +1,16 @@
+.l-header {
+  min-width: 100%;
+  height: 81px;
+  @include  max-screen($breakpoint-mobile) {
+    min-width: 100%;
+    height: 54px;
+  }
+}
+.l-header--home {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  @include  max-screen($breakpoint-mobile) {
+    height: 77px;
+  }
+}

@@ -1,0 +1,56 @@
+.button {
+  display: inline-block;
+  background-color: $button-bg-color;
+  border: 1px solid $button-border-color;
+  border-radius: 3px;
+  color: $button-font-color;
+  min-width: 249px;
+  height: 51px;
+  font-weight: bold;
+  font-family: $font-brandon;
+  padding: 15px;
+  text-align: center;
+  transition: background-color $base-duration $base-animation,
+              color $base-duration $base-animation;
+  @include  max-screen($breakpoint-mobile) {
+    min-width: 100%;
+  }
+  &:hover {
+    color: $button-hovered-font-color;
+    background-color: $button-hovered-bg-color;
+    @include  max-screen($breakpoint-mobile) {
+      color: $button-font-color;
+      background-color: $button-bg-color;
+    }
+  }
+}
+.button--submit {
+  color: #fff;
+  background-color: #189cd2;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  letter-spacing: 0.05em;
+  &:hover {
+    background-color: transparent;
+    color: #189cd2;
+    @include  max-screen($breakpoint-mobile) {
+      color: #fff;
+      background-color: #189cd2;
+    }
+  }
+  .form-main--confirm & {
+    margin: 0 20px;
+    @include  max-screen($breakpoint-mobile) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+.button--confirm {
+  .form-main--confirm & {
+    @include  max-screen($breakpoint-mobile) {
+      margin-bottom: 20px;
+    }
+  }
+}

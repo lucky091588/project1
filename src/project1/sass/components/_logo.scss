@@ -1,0 +1,44 @@
+.logo {
+  width: 207px;
+  float: left;
+  padding-left: 20px;
+  @include  max-screen($breakpoint-mobile) {
+    width: 172px;
+    padding-left: 11px;
+  }
+}
+.logo--home {
+  padding-left: 0px;
+  width: 465px;
+  bottom: -26px;
+  position: relative;
+  left: -2px;
+  @include  max-screen($breakpoint-mobile) {
+    left: 0;
+    width: 272px;
+    bottom: 0;
+    padding-left: 0;
+    transition: width $base-duration $base-animation,
+                bottom $base-duration $base-animation,
+                padding $base-duration $base-animation;
+    .is-stick &,
+    .is-expand & {
+      width: 172px;
+      bottom: 10px;
+      padding-left: 10px;
+    }
+  }
+}
+.logo__link {
+  display: block;
+}
+.logo__svg {
+  width: 100%;
+  height: 31px;
+  .logo--home & {
+    height: 77px;
+  }
+}
+.logo__svg-zoo {
+  fill: $logo-fill-color;
+}

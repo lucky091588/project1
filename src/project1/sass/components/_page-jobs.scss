@@ -1,0 +1,26 @@
+.page-jobs {
+  padding-top: 178px;
+	@include max-screen($breakpoint-mobile) {
+  	display: block;
+  	padding-top: 0;
+  }
+}
+.page-jobs__sidebar {
+  width: 390px;
+  padding-right: 30px;
+  padding-top: 100px;
+  position: relative;
+  @include max-screen($breakpoint-mobile) {
+  	padding: 0;
+  	width: 100%;
+  	text-align: center;
+  	margin-bottom: 150px;
+  }
+}
+.page-jobs__postings {
+  flex: 1;
+  width: calc(100% - 390px);
+  @include max-screen($breakpoint-mobile) {
+  	width: 100%;
+  }
+}

@@ -1,0 +1,44 @@
+.heading {
+  min-width: $site-wrapper;
+  @include  max-screen($breakpoint-mobile) {
+    min-width: 100%;
+  }
+}
+.heading__wrapper {
+  position: relative;
+  padding-top: 14px;
+  left: -3px;
+  padding-bottom: 34px;
+  @include  max-screen($breakpoint-mobile) {
+    padding-top: 21px;
+    left: -2px;
+    padding-bottom: 18px;
+  }
+}
+.heading__title {
+  font-size: 55.01px;
+  color: $heading-font-color;
+  text-transform: uppercase;
+  font-family: $font-brandon;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  @include  max-screen($breakpoint-mobile) {
+    font-size: 31px;
+  }
+  span {
+    display: block;
+    font-size: 15px;
+    font-family: $base-font-family;
+    color: $heading-description-font-color;
+    text-transform: none;
+    position: relative;
+    top: -12px;
+    left: 2px;
+    letter-spacing: 0;
+    @include  max-screen($breakpoint-mobile) {
+      font-size: 10px;
+      top: -3px;
+      left: 1px;
+    }
+  }
+}

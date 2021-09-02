@@ -1,0 +1,6 @@
+.l-footer {
+  min-width: $site-wrapper;
+  @include  max-screen($breakpoint-mobile) {
+    min-width: 100%;
+  }
+}

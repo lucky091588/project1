@@ -1,0 +1,149 @@
+//antialiased,subpixel-antialiased,none
+$font-smoothing: antialiased;
+
+//auto,optimizeSpeed,optimizeLegibility,geometricPrecision
+$text-rendering: auto;
+
+// base colors
+$color-white: #fff;
+$color-black: #000;
+$color-white-ice: #ebf7fc;
+$color-curious-blue: #189cd2;
+$color-cocoa-brown: #221815;
+$color-polar: #dceff8;
+$color-mine-shaft: #262626;
+$color-cod-gray: #1e1e1e;
+$color-silver: #bdbdbd;
+$color-dove-gray: #707070;
+$color-mercury: #e8e7e7;
+$color-light-gray: #ccc;
+$color-dusty-gray: #999999;
+$color-cerulean: #029DD5;
+$color-sapphire: #315095;
+$color-picton-blue: #45aceb;
+$color-havelock-blue: #41a3db;
+$color-apple: #5ec33a;
+$color-dawn: #9c9a99;
+
+$base-font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+$font-brandon: 'Brandon Grotesque';
+$font-arial: 'Arial';
+$base-font-size: 14px;
+$base-font-color: $color-mine-shaft;
+$base-background-color: $color-white;
+
+$site-wrapper: 1180px;
+$breakpoint-large: 1279px;
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 767px;
+$breakpoint-mobile-sm: 374px;
+
+$base-duration: 0.3s;
+$base-animation: ease;
+$z-max: 10;
+
+// body-background
+$body-bg-color: $color-white-ice;
+
+// hero
+$hero-font-color: $color-cod-gray;
+$hero-bg-color: $color-light-gray;
+$hero-border-color: $color-white;
+$hero-date-font-color: $color-white;
+$hero-cat-font-color: $color-curious-blue;
+$hero-cat-border-color: $color-curious-blue;
+$hero-title-bg-color: $color-white;
+
+// header
+$logo-fill-color: $color-curious-blue;
+$header-bg-color: $color-white;
+$header-border-color: $color-dove-gray;
+$header-box-shadow-color: $color-black;
+
+// pickup
+$pickup-bg-color: $color-white;
+$pickup-title-color: $color-curious-blue;
+$pickup-title-label-color: $color-cod-gray;
+
+// nav
+$nav-font-color: $color-cocoa-brown;
+$nav-active-font-color: $color-curious-blue;
+$nav-search-bg-color: $color-polar;
+
+// button
+$button-font-color: $color-curious-blue;
+$button-hovered-font-color: $color-white;
+$button-bg-color: $color-white;
+$button-hovered-bg-color: $color-curious-blue;
+$button-border-color: $color-curious-blue;
+
+// heading
+$heading-font-color: $color-cocoa-brown;
+$heading-description-font-color: $color-curious-blue;
+
+// article-query
+$article-query-font-color: $color-white;
+$article-query-date-font-color: $color-silver;
+$article-query-cat-font-color: $color-curious-blue;
+$article-query-tag-font-color: $color-curious-blue;
+$article-query-rank-bg-color: $color-curious-blue;
+$article-query-tag-bg-color: $color-white-ice;
+$article-query-title-color: $color-cod-gray;
+$article-query-tag-color: $color-dove-gray;
+
+// article
+$article-font-color: $color-cocoa-brown;
+$article-heading-border-color: $color-curious-blue;
+$article-bg-color: $color-curious-blue;
+$article-heading-gradient-top-color: $color-white;
+$article-heading-gradient-bot-color: $color-white-ice;
+$article-link-color: $color-curious-blue;
+$article-image-border-color: $color-polar;
+$article-author-link-color: $color-dawn;
+$article-author-link-active-color: $color-havelock-blue;
+
+// sns
+$facebook-color: $color-sapphire;
+$twitter-color: $color-picton-blue;
+$bookmark-color: $color-havelock-blue;
+$line-color: $color-apple;
+
+// sidebar
+$sidebar-font-color: $color-curious-blue;
+$sidebar-links-font-color: $color-cod-gray;
+$sidebar-query-font-color: $color-white;
+$sidebar-links-title-font-color: $color-cocoa-brown;
+$sidebar-links-contact-font-color: $color-curious-blue;
+$sidebar-bg-color: $color-white;
+$sidebar-query-color: $color-curious-blue;
+$sidebar-most-viewed-bg-color: $color-cocoa-brown;
+$sidebar-bacter-font-color: $color-cocoa-brown;
+
+// breadcrumbs
+$breadcrumbs-font-color: $color-silver;
+$breadcrumbs-active-font-color: $color-curious-blue;
+
+// pagination
+$pagination-border-color: $color-curious-blue;
+$pagination-font-color: $color-curious-blue;
+$pagination-hovered-font-color: $color-white;
+$pagination-bg-color: $color-white;
+$pagination-hovered-bg-color: $color-curious-blue;
+
+// footer-contact
+$footer-contact-bg-color: $color-white;
+$footer-contact-border-color: $color-mercury;
+$footer-contact-font-color: $color-cocoa-brown;
+$footer-contact-span-font-color: $color-curious-blue;
+$footer-contact-em-bg-color: $color-white-ice;
+
+// footer
+$footer-sites-bg-color: $color-mine-shaft;
+$footer-sites-color: $color-white;
+$footer-sites-border-color: $color-curious-blue;
+$footer-bg-color: $color-cocoa-brown;
+$footer-logo-fill-color: $color-white;
+$footer-font-color: $color-white;
+$footer-hover-color: $color-curious-blue;
+$social-media-bg-color: $color-white;
+$social-media-font-color: $color-cocoa-brown;

@@ -1,0 +1,40 @@
+$ie: '.is-ie &';
+.social-media {
+  list-style: none;
+  margin-bottom: 27px;
+  @include  max-screen($breakpoint-mobile) {
+    margin-bottom: 11px;
+  }
+}
+.social-media__item {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -4px;
+  padding: 0 6px;
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+}
+.social-media__link {
+  display: inline-block;
+  vertical-align: top;
+  height: 26px;
+  width: 26px;
+  background-color: $social-media-bg-color;
+  border-radius: 50%;
+  padding: 4px 0;
+  color: $social-media-font-color;
+  text-align: center;
+  transition: background $base-duration $base-animation,
+              color $base-duration $base-animation;
+  &:hover {
+    color: $footer-font-color;
+    background-color: $footer-hover-color;
+  }
+  #{$ie} {
+    padding: 6px 0 0;
+  }
+}

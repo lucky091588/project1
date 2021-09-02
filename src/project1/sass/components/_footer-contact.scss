@@ -1,0 +1,203 @@
+.footer-contact {
+  min-width: $site-wrapper;
+  @include  max-screen($breakpoint-mobile) {
+    min-width: 100%;
+  }
+}
+.footer-contact__wrapper {
+  position: relative;
+  padding: 126px 31px 127px 0;
+  @include  max-screen($breakpoint-mobile) {
+    padding: 20px 0 50px;
+  }
+}
+.footer-contact__title {
+  font-size: 90px;
+  color: #189cd2;
+  font-weight: bold;
+  font-family: $font-brandon;
+  opacity: .1;
+  letter-spacing: 0.056em;
+  position: absolute;
+  width: 100%;
+  top: 73px;
+  left: -4px;
+  line-height: 1;
+  @include  max-screen($breakpoint-mobile) {
+    display: none;
+  }
+}
+.footer-contact__content {
+  background-color: $footer-contact-bg-color;
+  padding: 46px 33px 44px 24px;
+  width: 995px;
+  float: right;
+  position: relative;
+  @include  max-screen($breakpoint-mobile) {
+    padding: 20px 20px 46px;
+    width: 100%;
+    float: none;
+  }
+}
+.footer-contact__contact-us {
+  width: 357px;
+  float: left;
+  border-right: 1px solid $footer-contact-border-color;
+  text-align: center;
+  height: 127px;
+  @include  max-screen($breakpoint-mobile) {
+    width: 100%;
+    float: none;
+    border-right: none;
+    text-align: center;
+    height: auto;
+    padding-bottom: 33px;
+  }
+}
+.footer-contact__contact-us-title {
+  font-family: $font-brandon;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: $footer-contact-font-color;
+  padding-top: 4px;
+  letter-spacing: 0.056em;
+  @include  max-screen($breakpoint-mobile) {
+    padding-top: 11px;
+    padding-left: 2px;
+    margin-bottom: 5px;
+  }
+  @include max-screen($breakpoint-mobile-sm) {
+    font-size: 36px;
+  }
+  span {
+    color: $footer-contact-span-font-color;
+  }
+}
+.footer-contact__contact-us-description {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.7;
+  padding-right: 3px;
+  @include  max-screen($breakpoint-mobile) {
+    padding-right: 0;
+  }
+}
+.footer-contact__tel {
+  float: left;
+  width: 321px;
+  border-left: 1px solid $footer-contact-border-color;
+  text-align: center;
+  height: 127px;
+  @include  max-screen($breakpoint-mobile) {
+    float: none;
+    max-width: 260px;
+    width: 100%;
+    border-left: none;
+    text-align: center;
+    height: auto;
+    margin: 0 auto;
+    border-top: 2px solid $footer-contact-border-color;
+    padding: 27px 2px 0 0;
+  }
+}
+.footer-contact__tel-description {
+  font-weight: bold;
+  color: $footer-contact-font-color;
+  line-height: 1.9;
+  padding-left: 6px;
+  position: relative;
+  top: 2px;
+  @include  max-screen($breakpoint-mobile) {
+    padding-left: 2px;
+    margin-bottom: -1px;
+  }
+}
+.footer-contact__tel-title {
+  display: block;
+  font-size: 40px;
+  font-family: $font-brandon;
+  font-weight: bold;
+  color: $footer-contact-font-color;
+  line-height: 1.19;
+  padding-left: 5px;
+  margin-bottom: 2px;
+  transition: color $base-duration $base-animation;
+  &:hover {
+    color: #189cd2;
+  }
+  @include  max-screen($breakpoint-mobile) {
+    padding-left: 3px;
+    margin-bottom: 1px;
+    padding-top: 2px;
+  }
+  @include max-screen($breakpoint-mobile-sm) {
+    font-size: 39px;
+  }
+}
+.footer-contact__tel-time {
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  padding-left: 8px;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+  @include  max-screen($breakpoint-mobile) {
+    font-size: 11px;
+    padding-left: 6px;
+    margin-bottom: 9px;
+  }
+}
+.footer-contact__tel-description-bottom {
+  display: inline-block;
+  width: 223px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: $footer-contact-em-bg-color;
+  font-style: normal;
+  padding: 4px 0 4px 6px;
+  margin-left: 6px;
+  @include  max-screen($breakpoint-mobile) {
+    padding: 3px 0;
+    margin-left: 3px;
+    margin-bottom: 31px;
+  }
+}
+.footer-contact__buttons {
+  float: left;
+  width: 249px;
+  height: 127px;
+  padding-top: 5px;
+  @include  max-screen($breakpoint-mobile) {
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+}
+.footer-contact__buttons-list {
+  list-style: none;
+}
+.footer-contact__buttons-item {
+  margin-bottom: 14px;
+  @include  max-screen($breakpoint-mobile) {
+    margin: 0 -5px 14px -6px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.footer-contact__buttons-link {
+  color: $button-hovered-font-color;
+  background-color: $button-hovered-bg-color;
+  @include  max-screen($breakpoint-mobile) {
+    padding-top: 17px;
+  }
+  &:hover {
+    background-color: $button-bg-color;
+    color: $button-font-color;
+    @include  max-screen($breakpoint-mobile) {
+      color: $button-hovered-font-color;
+      background-color: $button-hovered-bg-color;
+    }
+  }
+}
